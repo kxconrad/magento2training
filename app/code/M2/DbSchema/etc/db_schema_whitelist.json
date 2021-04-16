@@ -1,0 +1,14 @@
+{
+    "m2test_dbschema_table": {
+        "column": {
+            "id": true,
+            "name": true,
+            "surname": true,
+            "passport_id": true,
+            "added_time": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
