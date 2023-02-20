@@ -8,26 +8,35 @@
     ],
     "config": {
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "magento/composer-dependency-version-audit-plugin": true,
+            "magento/magento-composer-installer": true,
+            "magento/inventory-composer-installer": true,
+            "laminas/laminas-dependency-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "magento/composer-root-update-plugin": true
+        }
     },
     "require": {
-        "magento/product-community-edition": "2.4.0",
-        "magento/composer-root-update-plugin": "~1.0"
+        "magento/composer-dependency-version-audit-plugin": "~0.1",
+        "magento/composer-root-update-plugin": "~2.0",
+        "magento/product-community-edition": "2.4.5-p1"
     },
     "require-dev": {
-        "allure-framework/allure-phpunit": "~1.2.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-        "friendsofphp/php-cs-fixer": "~2.16.0",
+        "allure-framework/allure-phpunit": "~1.5.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "friendsofphp/php-cs-fixer": "~3.4.0",
         "lusitanian/oauth": "~0.8.10",
         "magento/magento-coding-standard": "*",
-        "magento/magento2-functional-testing-framework": "^3.0",
-        "pdepend/pdepend": "~2.7.1",
-        "phpcompatibility/php-compatibility": "^9.3",
-        "phpmd/phpmd": "^2.8.0",
-        "phpstan/phpstan": ">=0.12.3 <=0.12.23",
-        "phpunit/phpunit": "^9",
-        "sebastian/phpcpd": "~5.0.0",
-        "squizlabs/php_codesniffer": "~3.5.4"
+        "magento/magento2-functional-testing-framework": "^3.7",
+        "pdepend/pdepend": "~2.10.0",
+        "phpmd/phpmd": "^2.12.0",
+        "phpstan/phpstan": "^1.6.8",
+        "phpunit/phpunit": "~9.5.20",
+        "sebastian/phpcpd": "^6.0.3",
+        "squizlabs/php_codesniffer": "~3.6.0",
+        "symfony/finder": "^5.2"
     },
     "conflict": {
         "gene/bluefoot": "*"
@@ -36,8 +45,7 @@
         "psr-4": {
             "Magento\\Framework\\": "lib/internal/Magento/Framework/",
             "Magento\\Setup\\": "setup/src/Magento/Setup/",
-            "Magento\\": "app/code/Magento/",
-            "Zend\\Mvc\\Controller\\": "setup/src/Zend/Mvc/Controller/"
+            "Magento\\": "app/code/Magento/"
         },
         "psr-0": {
             "": [
@@ -64,7 +72,7 @@
             "Magento\\PhpStan\\": "dev/tests/static/framework/Magento/PhpStan/"
         }
     },
-    "version": "2.4.0",
+    "version": "2.4.5-p1",
     "minimum-stability": "stable",
     "repositories": [
         {
